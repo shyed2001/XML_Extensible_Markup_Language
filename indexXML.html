@@ -4,248 +4,378 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Luke Smith</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  <title>XML and XML in Android</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleXML.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  
 </head>
 <body>
-<header>
-<h1 class="title">Luke Smith</h1>
+<header id="title-block-header">
+<h1 class="title">XML and XML in Android</h1>
 </header>
-<nav id="TOC">
+<nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#about">About</a><ul>
-<li><a href="#my-main-work">My main work</a></li>
+<li><a href="#xml">XML</a></li>
+<li><a href="#xml-in-android">XML in Android:</a>
+<ul>
+<li><a href="#basics">Basics</a></li>
+</ul></li>
+<li><a href="#different-xml-files-used-in-android">Different XML Files Used in Android:</a>
+<ul>
+<li><a href="#layout-xml-files">1. Layout XML Files:</a>
+<ul>
+<li><a href="#basic-layout-xml-code">Basic Layout XML Code:</a></li>
+</ul></li>
+<li><a href="#manifest-xml-file-mainfest.xml">2. Manifest xml File (Mainfest.xml):</a>
+<ul>
+<li><a href="#defining-internet-permission-in-androidmanifest.xml">Defining Internet Permission in AndroidManifest.xml</a></li>
+<li><a href="#location-in-android-studio-1">Location in Android Studio:</a></li>
+</ul></li>
+<li><a href="#styles-xml-filestyles.xml">4. Styles xml File(styles.xml):</a>
+<ul>
+<li><a href="#location-in-android-studio-2">Location in Android Studio:</a></li>
+</ul></li>
+<li><a href="#drawable-xml-files">5. Drawable xml Files:</a></li>
+<li><a href="#color-xml-file-colors.xml">6. Color xml File (colors.xml):</a>
+<ul>
+<li><a href="#location-in-android-studio-3">Location in Android Studio</a></li>
+</ul></li>
+<li><a href="#dimension-xml-filedimens.xml">7. Dimension xml File(dimens.xml):</a>
+<ul>
+<li><a href="#location-in-android-studio-4">Location in Android Studio:</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#home-digitalbd.org">HOME <span>digitalbd.org</span></a></li>
 <li><a href="#contact">Contact</a></li>
-<li><a href="#institutions">Institutions</a></li>
-</ul></li>
-<li><a href="#classes">Classes</a><ul>
-<li><a href="#university-of-arizona">University of Arizona</a><ul>
-<li><a href="#in-person">In person</a></li>
-<li><a href="#online">Online</a></li>
-</ul></li>
-<li><a href="#university-of-georgia">University of Georgia</a></li>
-</ul></li>
-<li><a href="#lectures">Lectures</a><ul>
-<li><a href="#conference-presentations">Conference Presentations</a></li>
-<li><a href="#guest-lectures">Guest Lectures</a></li>
-</ul></li>
-<li><a href="#languages">Languages</a><ul>
-<li><a href="#human">Human</a></li>
-<li><a href="#machine">Machine</a></li>
-</ul></li>
-<li><a href="#computing">Computing</a><ul>
-<li><a href="#code">Code</a></li>
-<li><a href="#tools-i-use">Tools I Use</a><ul>
-<li><a href="#usual-workflow">Usual Workflow</a></li>
-<li><a href="#programs-im-familiar-with.">Programs I’m familiar with.</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#writings">Writings</a></li>
-<li><a href="#service">Service</a><ul>
-<li><a href="#university-of-arizona-1">University of Arizona</a></li>
-<li><a href="#university-of-georgia-1">University of Georgia</a></li>
-</ul></li>
 </ul>
 </nav>
-<h1 id="about">About</h1>
-<p>I’m Luke Smith.</p>
-<p>You’re looking at a document that doubles as a .pdf CV and a html webpage. However you’re viewing this, welcome! A lot of relevant information about me is here.</p>
-<p>You can download this in printable form at <a href="https://lukesmith.xyz/lukesmith.pdf" class="uri">https://lukesmith.xyz/lukesmith.pdf</a> or see it in HTML form at <a href="https://lukesmith.xyz" class="uri">https://lukesmith.xyz</a>.</p>
-<h2 id="my-main-work">My main work</h2>
+<hr />
+<p>title: XML Extensible Markup Language.</p>
+<p>author : by Shyed Shahriar Housaini.</p>
+<p>linkcolor: blue</p>
+<p>pdf-engine: xelatex</p>
+header-includes: -
+<p>classoption: “12pt”</p>
+<hr />
+<h1 id="xml">XML</h1>
+<blockquote>
+<h2 id="xml-1"><strong><em>XML :</em></strong></h2>
+</blockquote>
+<p>XML stands for Extensible Markup Language. XML is a markup language much like HTML used to describe data. XML tags are not predefined in XML. We must define our own Tags. Xml as itself is well readable both by human and machine. Also, it is scalable and simple to develop. In Android we use xml for designing our layouts because xml is lightweight language so it doesn’t make our layout heavy.</p>
+<p>………….</p>
+<p>………………</p>
+<p>……………………….</p>
+<p>………………………………….</p>
+<p>……………………………………………..</p>
+<h1 id="xml-in-android">XML in Android:</h1>
+<blockquote>
+<p>## <strong><em>XML in Android:</em></strong></p>
+</blockquote>
+<h3 id="basics">Basics</h3>
+<blockquote>
+<h1 id="basics-and-different-xml-files-used-in-android"><strong><em>Basics And Different XML Files Used In Android</em></strong></h1>
+</blockquote>
+<p>In this article we will go through the basic concepts of xml in Android and different XML files used for different purpose in Android. This will help you in writing a UI code to design your desired user interface.</p>
+<blockquote>
+<h2 id="basics-of-user-interface"><strong><em>Basics Of User Interface:</em></strong></h2>
+</blockquote>
+<p>The whole concept of Android User Interface is defined using the hierarchy of View and ViewGroup objects. A ViewGroup is an invisible container that organizes child views. These child views are other widgets which are used to make the different parts of UI. One ViewGroup can have another ViewGroup as an child element as shown in the figure given below:</p>
+<!-- Images -->
+<figure>
+<img src="./Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg" alt="Basics Of User Interface" /><figcaption aria-hidden="true">Basics Of User Interface</figcaption>
+</figure>
+<!--
++ Image credit to  [Basics Of User Interface](https://abhiandroid.com/ui/wp-content/uploads/2016/06/Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg).
+-->
+<p>Here in above Diagram ViewGroup (Linear Layout) contains one ViewGroup (i.e. Relative Layout)and two View(Button and TextView). Further two more View (i.e. 2 EditText ) are nested inside Relative Layout ViewGroup. It is important to note that one layout can be nested in another layout.</p>
+<p>The below code snippet will explain the above image in better way. Paste it in activity_main.xml</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">LinearLayout</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:orientation=</span><span class="st">&quot;vertical&quot;</span><span class="ot"> android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_height=</span><span class="st">&quot;match_parent&quot;</span>&gt;</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">Button</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:id=</span><span class="st">&quot;@+id/buton1&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:text=</span><span class="st">&quot;Button&quot;</span>/&gt;</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">TextView</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:id=</span><span class="st">&quot;@+id/textView1&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:text=</span><span class="st">&quot;sample Text&quot;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_marginTop=</span><span class="st">&quot;15dp&quot;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:textSize=</span><span class="st">&quot;30dp&quot;</span>/&gt;</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">RelativeLayout</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_height=</span><span class="st">&quot;match_parent&quot;</span>&gt;</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">EditText</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:id=</span><span class="st">&quot;@+id/editTextName&quot;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:hint=</span><span class="st">&quot;First Name&quot;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a> /&gt;</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">EditText</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:id=</span><span class="st">&quot;@+id/editTextLastName&quot;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:hint=</span><span class="st">&quot;Last Name&quot;</span>/&gt;</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">RelativeLayout</span>&gt;</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">LinearLayout</span>&gt;</span></code></pre></div>
+<figure>
+<img src="./XML-UI-in-Android-with-example.jpg" title="Basics Android UI" alt="Basics Android UI" /><figcaption aria-hidden="true">Basics Android UI</figcaption>
+</figure>
+<h1 id="different-xml-files-used-in-android">Different XML Files Used in Android:</h1>
+<blockquote>
+<h2 id="different-xml-files-used-in-android-1"><strong><em>Different XML Files Used in Android:</em></strong></h2>
+</blockquote>
+<p>In Android there are several xml files used for several different purposes. Below we define each and every one.</p>
+<h2 id="layout-xml-files">1. Layout XML Files:</h2>
+<p>Layout xml files are used to define the actual UI(User interface) of our application. It holds all the elements(views) or the tools that we want to use in our application. Like the TextView’s, Button’s and other UI elements.</p>
+<p>### Location in Android Studio: You will find out this file inside the res folder and inside it there is another folder named layout where you will get all the layout files for their respective activities or fragments.</p>
+<figure>
+<img src="./Layout-XML-in-Android-Studio.jpg" title="Layout XML Files" alt="Basics Android UI" /><figcaption aria-hidden="true">Basics Android UI</figcaption>
+</figure>
+<h3 id="basic-layout-xml-code">Basic Layout XML Code:</h3>
+<p>Below we show activity_main.xml file in which we have two TextView’s.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--  RelativeLayout in which we set green color for the background --&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">RelativeLayout</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ot">xmlns:tools=</span><span class="st">&quot;http://schemas.android.com/tools&quot;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_height=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ot">android:background=</span><span class="st">&quot;@color/greenColor&quot;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ot">tools:context=</span><span class="st">&quot;.MainActivity&quot;</span>&gt;</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">TextView</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ot">android:id=</span><span class="st">&quot;@+id/firstTextView&quot;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_centerHorizontal=</span><span class="st">&quot;true&quot;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_margin=</span><span class="st">&quot;20dp&quot;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ot">android:padding=</span><span class="st">&quot;10dp&quot;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ot">android:text=</span><span class="st">&quot;First Text View&quot;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ot">android:textColor=</span><span class="st">&quot;@color/white&quot;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ot">android:textSize=</span><span class="st">&quot;20sp&quot;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ot">android:textStyle=</span><span class="st">&quot;bold&quot;</span> /&gt;</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- second TextView --&gt;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">TextView</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ot">android:id=</span><span class="st">&quot;@+id/secondTextView&quot;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_below=</span><span class="st">&quot;@+id/firstTextView&quot;</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_centerHorizontal=</span><span class="st">&quot;true&quot;</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ot">android:layout_margin=</span><span class="st">&quot;20dp&quot;</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ot">android:padding=</span><span class="st">&quot;10dp&quot;</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ot">android:text=</span><span class="st">&quot;Second Text View&quot;</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ot">android:textColor=</span><span class="st">&quot;@color/white&quot;</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ot">android:textSize=</span><span class="st">&quot;20sp&quot;</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ot">android:textStyle=</span><span class="st">&quot;bold&quot;</span> /&gt;</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">RelativeLayout</span>&gt;</span></code></pre></div>
+<h2 id="manifest-xml-file-mainfest.xml">2. Manifest xml File (Mainfest.xml):</h2>
+<p>This xml is used to define all the components of our application. It includes the names of our application packages, our Activities, receivers, services and the permissions that our application needs. For Example – Suppose we need to use internet in our app then we need to define Internet permission in this file.</p>
+<h4 id="location-in-android-studio">Location in Android Studio:</h4>
+<p>It is located inside app &gt; manifests folder</p>
+<figure>
+<img src="./AndroidManifest-xml-location-in-Android-Studio.jpg" title="manifests folder" alt="AndroidManifest-xml-location-in-Android-Studio" /><figcaption aria-hidden="true">AndroidManifest-xml-location-in-Android-Studio</figcaption>
+</figure>
+<h3 id="defining-internet-permission-in-androidmanifest.xml">Defining Internet Permission in AndroidManifest.xml</h3>
+<p>Below we show the AndroidManifest.xml file and define the Internet Permission in that file.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">manifest</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ot">package=</span><span class="st">&quot;example.abhiandroid.MyApplication&quot;</span>&gt;     <span class="co">&lt;!-- application package name --&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">uses-permission</span><span class="ot"> android:name=</span><span class="st">&quot;ANDROID.PERMISSION.INTERNET&quot;</span> /&gt;</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- define Internet Permission --&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">application</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ot">android:allowBackup=</span><span class="st">&quot;true&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ot">android:icon=</span><span class="st">&quot;@mipmap/ic_launcher&quot;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ot">android:label=</span><span class="st">&quot;@string/app_name&quot;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ot">android:theme=</span><span class="st">&quot;@style/AppTheme&quot;</span>&gt;</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- add your Activities, Receivers, Services Names Here --&gt;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">activity</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ot">android:name=</span><span class="st">&quot;.MainActivity&quot;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ot">android:label=</span><span class="st">&quot;@string/app_name&quot;</span>&gt;</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">intent-filter</span>&gt;</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">action</span><span class="ot"> android:name=</span><span class="st">&quot;android.intent.action.MAIN&quot;</span> /&gt;</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">category</span><span class="ot"> android:name=</span><span class="st">&quot;android.intent.category.LAUNCHER&quot;</span> /&gt;</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">intent-filter</span>&gt;</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">activity</span>&gt;</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">application</span>&gt;</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">manifest</span>&gt;</span></code></pre></div>
+<p>## 3. Strings xml File(strings.xml): This xml file is used to replace the Hard-coded strings with a single string. We define all the strings in this xml file and then access them in our app(Activity or in Layout XML files) from this file. This file enhance the reusability of the code.</p>
+<h3 id="location-in-android-studio-1">Location in Android Studio:</h3>
+<figure>
+<img src="./strings-xml-location-android-studio.jpg" title="strings-xml-location-android-studio" alt="strings-xml-location-android-studio" /><figcaption aria-hidden="true">strings-xml-location-android-studio</figcaption>
+</figure>
+<blockquote>
+<p>Below we show strings.xml file and define a string in the file.</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resources</span>&gt;</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">string</span><span class="ot"> name=</span><span class="st">&quot;app_name&quot;</span>&gt;My Application&lt;/<span class="kw">string</span>&gt;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">string</span><span class="ot"> name=</span><span class="st">&quot;hello_world&quot;</span>&gt;Hello world!&lt;/<span class="kw">string</span>&gt;</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">string</span><span class="ot"> name=</span><span class="st">&quot;action_settings&quot;</span>&gt;Settings&lt;/<span class="kw">string</span>&gt;</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">string</span><span class="ot"> name=</span><span class="st">&quot;login&quot;</span>&gt;User Login&lt;/<span class="kw">string</span>&gt;</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- define your strings here --&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">resources</span>&gt;</span></code></pre></div>
+<h2 id="styles-xml-filestyles.xml">4. Styles xml File(styles.xml):</h2>
+<p>This xml is used to define different styles and looks for the UI(User Interface) of application. We define our custom themes and styles in this file.</p>
+<h3 id="location-in-android-studio-2">Location in Android Studio:</h3>
+<figure>
+<img src="./styles-location-xml-Android-Studio-1.jpg" title="styles-location-xml-Android-Studio-1" alt="styles-location-xml-Android-Studio-1" /><figcaption aria-hidden="true">styles-location-xml-Android-Studio-1</figcaption>
+</figure>
+<blockquote>
+<p>Below we show the style.xml file.</p>
+</blockquote>
+<div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resources</span>&gt;</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Base application theme. --&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">style</span><span class="ot"> name=</span><span class="st">&quot;AppTheme&quot;</span><span class="ot"> parent=</span><span class="st">&quot;Theme.AppCompat.Light.DarkActionBar&quot;</span>&gt;</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Customize your theme here. --&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">style</span>&gt;</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">resources</span>&gt;</span></code></pre></div>
+<h2 id="drawable-xml-files">5. Drawable xml Files:</h2>
+<p>These are those xml files that are used to provide various graphics to the elements or views of application. When we need to create a custom UI we use drawable xml files. Suppose if we need to define a gradient color in the background of Button or any custom shape for a view then we create a Drawable xml file and set it in the background of View.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Do Read: How To Create Drawable Resource XML File in Android Studio</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>Below we show custom_drawable.xml file and create a gradient background color using style attribute.</p>
+</blockquote>
+<div class="sourceCode" id="cb6"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">shape</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span>&gt;</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- define start, center and end color for gradient --&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">gradient</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ot">android:centerColor=</span><span class="st">&quot;#0f0&quot;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ot">android:endColor=</span><span class="st">&quot;#00f&quot;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ot">android:startColor=</span><span class="st">&quot;#f00&quot;</span> /&gt;</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">shape</span>&gt;</span></code></pre></div>
+<h2 id="color-xml-file-colors.xml">6. Color xml File (colors.xml):</h2>
+<p>This file is used to define the color codes that we used in our app. We simply define the color’s in this file and used them in our app from this file.</p>
+<h3 id="location-in-android-studio-3">Location in Android Studio</h3>
+<figure>
+<img src="./colors-xml-location-Android-Studio.jpg" title="colors-xml-location-Android-Studio" alt="colors-xml-location-Android-Studio" /><figcaption aria-hidden="true">colors-xml-location-Android-Studio</figcaption>
+</figure>
+<blockquote>
+<p>Below we show the colors.xml file in which we define green and white color.</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resources</span>&gt;</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- define your colors Here --&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">color</span><span class="ot"> name=</span><span class="st">&quot;greenColor&quot;</span>&gt;#0f0&lt;/<span class="kw">color</span>&gt;</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">color</span><span class="ot"> name=</span><span class="st">&quot;white&quot;</span>&gt;#fff&lt;/<span class="kw">color</span>&gt;</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">resources</span>&gt;</span></code></pre></div>
+<h2 id="dimension-xml-filedimens.xml">7. Dimension xml File(dimens.xml):</h2>
+<p>This xml file is used to define the dimensions of the View’s. Suppose we need a Button with 50dp(density pixel) height then we define the value 50dp in dimens.xml file and then use it in our app from this file.</p>
+<h3 id="location-in-android-studio-4">Location in Android Studio:</h3>
+<figure>
+<img src="./Dimension-xml-File-in-Android-Studio.jpg" title="Dimension-xml-File-in-Android-Studio" alt="Dimension-xml-File-in-Android-Studio" /><figcaption aria-hidden="true">Dimension-xml-File-in-Android-Studio</figcaption>
+</figure>
+<blockquote>
+<p>Below we show the dimens.xml file in which we define 50dp dimension for Button height.</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resources</span>&gt;</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Default screen margins, per the Android Design guidelines. --&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dimen</span><span class="ot"> name=</span><span class="st">&quot;activity_horizontal_margin&quot;</span>&gt;16dp&lt;/<span class="kw">dimen</span>&gt;</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dimen</span><span class="ot"> name=</span><span class="st">&quot;activity_vertical_margin&quot;</span>&gt;16dp&lt;/<span class="kw">dimen</span>&gt;&lt;<span class="kw">dimen</span><span class="ot"> name=</span><span class="st">&quot;btnheight&quot;</span>&gt;50dp&lt;/<span class="kw">dimen</span>&gt;</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">resources</span>&gt;</span></code></pre></div>
+<h1 id="home-digitalbd.org">HOME <a href="https://digitalbd.org">digitalbd.org</a></h1>
+<h1 id="contact">Contact</h1>
 <ul>
-<li>I manage the Arch Linux meta-distribution and install scripts <a href="https://larbs.xyz">LARBS</a>.</li>
-<li>I’m a doctoral candidate in linguistics at the University of Arizona.</li>
-<li>I run a YouTube channel that focuses mainly on technology, targeted mostly towards “power-users”.</li>
-</ul>
-<h2 id="contact">Contact</h2>
-<ul>
-<li>Email: <a href="mailto:luke@lukesmith.xyz">luke@lukesmith.xyz</a></li>
-<li>Website: <a href="https://lukesmith.xyz" class="uri">https://lukesmith.xyz</a></li>
-<li>Github: <a href="https://github.com/LukeSmithxyz" class="uri">https://github.com/LukeSmithxyz</a></li>
-<li>YouTube: <a href="https://youtube.com/c/LukeSmithxyz" class="uri">https://youtube.com/c/LukeSmithxyz</a></li>
-</ul>
-<h2 id="institutions">Institutions</h2>
-<ul>
-<li>Ph.D., Linguistics. University of Arizona. 2015–</li>
-<li>M.A., Linguistics. University of Georgia. 2013–2015</li>
-<li>Exchange Program, Zhèngzhōu University. 2012.</li>
-<li>B.A., International Economics and Modern Languages. Georgia State University. 2009–2012.</li>
-<li>Valdosta State University (2008–2009)</li>
-</ul>
-<h1 id="classes">Classes</h1>
-<p>On the HTML version, scroll over a class for teaching evaluations, if available.</p>
-<h2 id="university-of-arizona">University of Arizona</h2>
-<h3 id="in-person">In person</h3>
-<ul>
-<li><dl>
-<dt>LING 300 “Introduction to Syntax”.</dt>
-<dd><a href="https://lukesmith.xyz/dox/300/LING300_syllabus.pdf">Syllabus</a>
-</dd>
-</dl></li>
-<li><dl>
-<dt>LING 150 “Language”.</dt>
-<dd>Teaching evaluations: <a href="https://lukesmith.xyz/dox/reviews/tce_sp17_wed.pdf">Spring 2017 Wednesday</a>, <a href="https://lukesmith.xyz/dox/reviews/tce_sp17_fri.pdf">Spring 2017 Friday</a>, <a href="https://lukesmith.xyz/dox/reviews/tce_fa16.pdf">Fall 2016</a>, <a href="https://lukesmith.xyz/dox/reviews/tce_sp16_10.pdf">Spring 2016 10AM Section</a>, <a href="https://lukesmith.xyz/dox/reviews/tce_sp16_11.pdf">Spring 2016 11AM Section</a>, <a href="https://lukesmith.xyz/dox/reviews/tce_fa15.pdf">Fall 2015</a>
-</dd>
-</dl></li>
-</ul>
-<h3 id="online">Online</h3>
-<ul>
-<li>LING 150 “Language”.</li>
-<li>ESOC 210 “The History of Hacking and Open Source Culture”.</li>
-</ul>
-<h2 id="university-of-georgia">University of Georgia</h2>
-<ul>
-<li><dl>
-<dt>LING 2100 “Study of Language”.</dt>
-<dd>Teaching evaluations: <a href="https://lukesmith.xyz/dox/reviews/tce_sp15.pdf">Spring 2015</a>, <a href="https://lukesmith.xyz/dox/reviews/tce_fa14.pdf">Fall 2014</a>
-</dd>
-</dl></li>
-<li><dl>
-<dt>LING 3150 “Generative Syntax”.</dt>
-<dd><a href="https://lukesmith.xyz/dox/3150.pdf">Syllabus</a>
-</dd>
-</dl></li>
-</ul>
-<h1 id="lectures">Lectures</h1>
-<h2 id="conference-presentations">Conference Presentations</h2>
-<ul>
-<li>The Evoution of the Ibero-Romance Irregular Imperfect: A Constraint-based Analysis. 2018. 28th Annual Symposium on Hispanic and Luso-Brazilian Literature, Language and Culture. <a href="https://youtube.com/watch?v=PMPfRFwH1Qw">Video</a>. <a href="https://lukesmith.xyz/dox/ling/luke_imperfect">Slides (sent)</a>.</li>
-<li>Scope without Syntax: Towards a Game Theoretic Approach. 2017. UofA Synsalon. <a href="https://lukesmith.xyz/dox/ling/luke_synsalon.pdf">Slides</a>.</li>
-<li>Language as Synesthesia. 2017. Tom Bever’s Seminar on language and consciousness. <a href="https://youtube.com/watch?v=he4-K3Ir1PY">Video</a>. <a href="https://lukesmith.xyz/dox/etc/luke_synesthesia.pdf">Slides</a>.</li>
-<li>Towards Biolinguistic Clarity in Generative Syntax. 2015. The Interdisciplinary Linguististics Conference at UGA.</li>
-<li>Syntax is for Real! Parameterization of Head Movement in Korean and its Effects on Scope and Alternations. 2015. LSUGA Tiny Talks.</li>
-<li>External Possession and the Undisentanglability of Syntax and Semantics. 2015. University of Georgia Linguistics Program Spring Colloquium.</li>
-<li>The acquisition of <em>tú</em> and <em>usted</em> by English Speakers: A study of non-native knowledge and usage of forms of address. 2013. Georgia State Undergraduate Research Conference.</li>
-<li>Theories of contraction: A survey of macroeconomic theories of depression. 2012. Georgia State Undergraduate Research Conference.</li>
-</ul>
-<h2 id="guest-lectures">Guest Lectures</h2>
-<p>This list in non-exhaustive. I’ve made available some of the slides from the talks, but in many cases I use slides only as a visual aid, so it might be unclear what I’m saying looking at the slides alone.</p>
-<ul>
-<li>Linguistics Isn’t 60 Years Old!: Pāṇinian Approaches to the Syntax and Semantics of Natural Language. 2018. For Simin Karimi’s <em>Major Works in Syntax</em> class. <a href="https://youtube.com/watch?v=8yZ91YUdRfY">Video</a>.</li>
-<li>Quantifier Scope is Just All Fun and Games! Linguistics Department Graduate Student Showcase. 2018. <a href="https://youtube.com/watch?v=5w_PMpQiGL0">Video</a>.</li>
-<li>The Origins and Mechanics of the Greek Alphabet. 2017. For Shannon Grippando’s <em>The Psychology of Writing Systems</em> class. <a href="https://lukesmith.xyz/dox/etc/greek_alphabet.pdf">Handout</a>.</li>
-<li>The Phonetics of Language. 2016. For Amy Fountain’s <em>Language</em> class.</li>
-<li>Constituent Structure—What is it and where does it come from?. 2016. For Simin Karimi’s <em>Introduction to Syntax</em> class. <a href="https://lukesmith.xyz/dox/300/luke_constituency_300.pdf">Some slides</a>.</li>
-<li>An Introduction to Minimalism. 2016. For Doug Merchant’s <em>Generative Syntax</em> class. <a href="https://lukesmith.xyz/dox/etc/luke_doug_min.pdf">Slides</a>.</li>
-<li>Optimizing Structure. 2016. For Doug Merchant’s <em>Generative Syntax</em> class. <a href="https://lukesmith.xyz/dox/etc/luke_doug_allphon.pdf">Slides</a>.</li>
-<li>Syntactic Theory and Psycholinguistics. 2015. For Doug Mercant’s <em>Psychology of Language</em> class. <a href="https://lukesmith.xyz/dox/etc/syn_psycho.pdf">Slides</a>.</li>
-</ul>
-<h1 id="languages">Languages</h1>
-<h2 id="human">Human</h2>
-<p>Spanish, Mandarin, Latin, some Persian and French, reading knowledge of Classical/Koiné Greek and most Romance languages, grammatical knowledge of many Indo-European languages, Korean, and others.</p>
-<h2 id="machine">Machine</h2>
-<p>Python, Perl, R, PHP, Matlab/GNU Octave, bash/shell, some superficial knowledge of C, common LISP and Haskel; markup languages including LaTeX, XeLaTeX , R Markdown, HTML and CSS.</p>
-<h1 id="computing">Computing</h1>
-<h2 id="code">Code</h2>
-<ul>
-<li><dl>
-<dt>mutt and offlineIMAP wizard. <a href="https://githib.com/lukesmithxyz/mutt-wizard">Github</a>.</dt>
-<dd>A tool for setting up a fully featured personal mail system and offlineIMAP server, with GPG secured passwords, server detection and support for notmuch mail indexing and autosyncing with notification.
-</dd>
-</dl></li>
-<li>shortcut-sync. <a href="https://github.com/lukesmithxyz/shortcut-sync">Github</a>.</li>
-<li><dl>
-<dt>Corpus Latinum Lucae. <a href="https://github.com/lukesmithxyz/corpus-latinum">Github</a>.</dt>
-<dd>(Still in progress.) A planned Latin corpus to be searchable by regexes. Right now, I’ve developed a part of speech tagger based on Whitacker’s WORDS and some systems for converting Latin HTML files into tagged text documents.
-</dd>
-</dl></li>
-<li><dl>
-<dt>voidrice. <a href="https://github.com/lukesmithxyz/voidrice">Github</a>.</dt>
-<dd>My most popular item on Github, dotfiles for an i3-gaps based Linux system. This is my personal config which is employed by LARBS.
-</dd>
-</dl></li>
-<li><dl>
-<dt>LARBS (Luke’s Auto-Ricing Bootstrapping Scripts). <a href="https://github.com/lukesmithxyz/larbs">Github</a>. <a href="https://larbs.xyz">Website</a>.</dt>
-<dd>A series of scripts that automatically configures a full-featured vim and i3-gaps-based GNU/Linux system on Arch Linux or derived distributions.
-</dd>
-</dl></li>
-</ul>
-<h2 id="tools-i-use">Tools I Use</h2>
-<p>I have lots of tutorials on many of these programs and tools on my <a href="https://youtube.com/c/lukesmithxyz">my YouTube channel</a>.</p>
-<h3 id="usual-workflow">Usual Workflow</h3>
-<p>I use a <strong>vim</strong>-based setup in a tiling window manager (<strong>i3-gaps</strong>). I compile documents using <strong>R Markdown</strong> or <strong>LaTeX</strong>, and <strong>biber</strong> for references. I prefer multimedia manipulation in the terminal with tools like <strong>imagemagick</strong> and <strong>ffmpeg</strong> for extensibilitiy’s sake. I’ve run Microsoft Windows, Mac OS X and GNU/Linux systems (both Debian and Arch-based varieties, as well as Void Linux).</p>
-<h3 id="programs-im-familiar-with.">Programs I’m familiar with.</h3>
-<p>tmux, ssh, RStudio, Blender (mostly for video-editing), Praat, Audacity, E-Prime, GIMP, pandoc, Jupyter. I’ve managed websites manually via ssh and vim using HTML/CSS/PHP and with tools such as Github Pages (Jekyll) WordPress via either cpanel or wp-cli. Some experience with myBB.</p>
-<h1 id="writings">Writings</h1>
-<p>On the HTML version, scroll over for a summary.</p>
-<ul>
-<li><dl>
-<dt>A Critique of “Reason”. <a href="https://github.com/LukeSmithxyz/critique-of-reason/blob/master/rational.pdf">PDF</a>.</dt>
-<dd>A critique of the “Heuristics and Biases” approach to cognition usually associated withe Kahnemann and Tversky. I argue for a variety of ecological rationality, stating that tendencies which seem irrational in experimental conditions are not in the real world, but also that heuristics and biases are all constuable as mental <em>models</em> which differ only in scale, where there are often negative returns to scale, making simple heuristics preferable to so-called “optimization”.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Scope Without Syntax: A Game Theoretic Approach. <a href="https://github.com/LukeSmithxyz/scope-without-syntax/blob/master/prelim2.pdf">PDF</a>.</dt>
-<dd>Second qualifying paper. 2017.
-</dd>
-<dd>A Game Theoretic analysis of quantifier scope, arguing that possible scope interpretations fall out from pragmatic assumptions about speaker/hearer intention. One empirical claim is that syntactic rigidity should universally correlate with scope ambiguity, while flexible languages/constructions tend to be scopally non-ambiguous.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Syntax Without Syntax. <a href="https://github.com/LukeSmithxyz/syntax-without-syntax/blob/master/prelim.pdf">PDF</a>.</dt>
-<dd>First qualifying paper. 2017.
-</dd>
-<dd>Language differences in syntactic word order can be modeled as falling out from otherwise independent prosodic constraints (modeled Optimality Theoretically). Each language has a prosodic pattern and sentential constituents are placed optimally in that template. This avoid grammar overgeneralization that occurs in Halle and Vergnaud.
-</dd>
-</dl></li>
-<li><dl>
-<dt>External Possession and the Undisentanglability of Syntax and Semantics. <a href="https://lukesmith.xyz/thesis.pdf">PDF</a>.</dt>
-<dd>Master’s Thesis. 2015.
-</dd>
-<dd>Many languages have external possession constructions which may be possessive datives, incorporated possessa or other types, but all with an affected possessor abide by subtlely similar syntactic constraints, always disallowing EP from agentive clauses. This is argued to be due to an inherent thematic/semantic hierarchy in the “syntax”.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Indo-European Particles and Head-Movement-driven Word Order Change. <a href="https://lukesmith.xyz/dox/ling/luke_pie_wordorder.pdf">PDF</a>.</dt>
-<dd>An informal squib arguing that word order differences in Indo-European languages were historically telegraphed by particle placement, and verbs moved to unify with particles. I.e. languages with initial particles gradually shifted to be VSO, languages with second position particles moved to being V2 and later SVO.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Scope Markings and Series Phrase Parsing. <a href="https://lukesmith.xyz/dox/ling/luke_scopemarking.pdf">PDF</a>.</dt>
-<dd>A crazy idea about scope marking, arguing that if we take a serial approach to prosodification, the vexxing construction of scope marking may in fact be a repair strategy to meet a general desire of the language faculty to group together a question word with where it takes scope, based on an intuition similar to N. Richards’ Contiguity Theory.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Syntax is Just a Phonological Construct! <a href="https://lukesmith.xyz/dox/ling/luke_worder.pdf">PDF</a>.</dt>
-<dd>A precursor write-up to the “Syntax without syntax” paper above.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Some countercyclic problems at the nexus of phonology and syntax. <a href="https://lukesmith.xyz/dox/ling/luke_countercyclic.pdf">PDF</a>.</dt>
-<dd>A brief write-up ennumerating some aspects of syntax which are tied into prosody/phonology/semantics and how generally they produce counter-cyclicity problems for Generative Grammar and any “Y-modeled” grammar.
-</dd>
-</dl></li>
-<li><dl>
-<dt>Accomodating phonological structure: Extraposition, the EPP and trace effects. <a href="https://lukesmith.xyz/dox/ling/luke_synphon.pdf">PDF</a>.</dt>
-<dd>Probably the first “syntax is just phonology” paper I wrote, a term paper. I detail the mismatch between semantic and prosodic structure as the origin of syntactic movement, etc.
-</dd>
-</dl></li>
-</ul>
-<h1 id="service">Service</h1>
-<h2 id="university-of-arizona-1">University of Arizona</h2>
-<ul>
-<li>Coyote Papers Editor for the 2018 Arizona Lingusitics Circle.</li>
-<li>Creator and manager of Tom Bever’s Language and Cognition Lab site: <a href="http://coglanglab.com">coglanglab.com</a>.</li>
-<li>Arizona Linguistics Circle Peer-Reviewer 2017.</li>
-<li>Indo-European Reading Group Director. 2015–2016.</li>
-</ul>
-<h2 id="university-of-georgia-1">University of Georgia</h2>
-<ul>
-<li>LSUGA Website Manager. 2014–2016.</li>
-<li>LSUGA Interdisciplinary Conference in Linguistics Committee Member. 2014–2015.</li>
-<li>Graduate Student Mentor. 2014–2015.</li>
-<li>Socio-Paths Sociolingusitics Reading Group Co-Director. 2014.</li>
-<li>Typology Reading Group Director. 2014.</li>
+<li><p>Email : <a href="mailto:shyed2001@gmail.com">shyed2001@gmail.com</a></p></li>
+<li><p>Website : <a href="https://digitalbd.org">https://digitalbd.org</a></p></li>
+<li><p>Github : <a href="https://github.com/shyed2001">https://github.com/shyed2001</a></p></li>
+<li><p>LinkedIn : <a href="https://www.linkedin.com/in/shyed-shahriar-housaini">https://www.linkedin.com/in/shyed-shahriar-housaini</a></p></li>
+<li><p>MyCV : <a href="https://digitalbd.org/MyCV.html">https://digitalbd.org/MyCV.html</a></p></li>
 </ul>
 </body>
 </html>

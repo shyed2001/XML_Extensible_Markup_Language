@@ -1,178 +1,322 @@
----
-title:XML by  Shyed Shahriar Housaini.
-linkcolor: blue
-pdf-engine: xelatex
-header-includes:
- - \usepackage[margin=.5in]{geometry}
-classoption: "12pt"
+
+
+
 ---
 
-# XML in Android:
-## Basics And Different XML Files Used In Android
+title: XML Extensible Markup Language. 
+
+author : by  Shyed Shahriar Housaini.
+
+linkcolor: blue
+
+pdf-engine: xelatex
+
+header-includes:
+ - \usepackage[margin=.5in]{geometry}
+ 
+classoption: "12pt"
+
+---
+
+# XML
+> ## **_XML  :_**
+
  XML stands for Extensible Markup Language. XML is a markup language much like HTML used to describe data.  XML tags are not predefined in XML. We must define our own Tags. Xml as itself is well readable both by human and machine. Also, it is scalable and simple to develop. In Android we use xml for designing our layouts because xml is lightweight language so it doesn’t make our layout heavy.
+
+.............
+
+..................
+
+............................
+
+........................................
+
+.....................................................
+
+# XML in Android:
+>  ## **_XML in Android:_**
+
+### Basics
+
+># **_Basics And Different XML Files Used In Android_**
+
 
 In this article we will go through the basic concepts of xml in Android and different XML files used for different purpose in Android. This will help you in writing a UI code to design your desired user interface. 
 
 
 
-## My main work
-
-+ I manage the Arch Linux meta-distribution and install scripts [LARBS](https://larbs.xyz).
-+ I'm a doctoral candidate in linguistics at the University of Arizona.
-+ I run a YouTube channel that focuses mainly on technology, targeted mostly towards "power-users".
-
-## Contact
-
-+ Email: [luke@lukesmith.xyz](mailto:luke@lukesmith.xyz)
-+ Website: [https://lukesmith.xyz](https://lukesmith.xyz)
-+ Github: [https://github.com/LukeSmithxyz](https://github.com/LukeSmithxyz)
-+ YouTube: [https://youtube.com/c/LukeSmithxyz](https://youtube.com/c/LukeSmithxyz)
-
-## Institutions
-
-+ Ph.D., Linguistics. University of Arizona. 2015--
-+ M.A., Linguistics. University of Georgia. 2013--2015
-+ Exchange Program, Zhèngzhōu University. 2012.
-+ B.A., International Economics and Modern Languages. Georgia State University. 2009--2012.
-+ Valdosta State University (2008--2009)
-
-# Classes
-
-On the HTML version, scroll over a class for teaching evaluations, if available.
-
-## University of Arizona
-
-### In person
-
-+ LING 300 "Introduction to Syntax".
-: [Syllabus](https://lukesmith.xyz/dox/300/LING300_syllabus.pdf)
-+ LING 150 "Language".
-: Teaching evaluations: [Spring 2017 Wednesday](https://lukesmith.xyz/dox/reviews/tce_sp17_wed.pdf), [Spring 2017 Friday](https://lukesmith.xyz/dox/reviews/tce_sp17_fri.pdf), [Fall 2016](https://lukesmith.xyz/dox/reviews/tce_fa16.pdf), [Spring 2016 10AM Section](https://lukesmith.xyz/dox/reviews/tce_sp16_10.pdf), [Spring 2016 11AM Section](https://lukesmith.xyz/dox/reviews/tce_sp16_11.pdf), [Fall 2015](https://lukesmith.xyz/dox/reviews/tce_fa15.pdf)
-
-### Online
-
-+ LING 150 "Language".
-+ ESOC 210 "The History of Hacking and Open Source Culture".
-
-## University of Georgia
-
-+ LING 2100 "Study of Language".
-: Teaching evaluations: [Spring 2015](https://lukesmith.xyz/dox/reviews/tce_sp15.pdf), [Fall 2014](https://lukesmith.xyz/dox/reviews/tce_fa14.pdf)
-+ LING 3150 "Generative Syntax".
-: [Syllabus](https://lukesmith.xyz/dox/3150.pdf)
-
-# Lectures
-
-## Conference Presentations
-
-+ The Evoution of the Ibero-Romance Irregular Imperfect: A Constraint-based Analysis. 2018. 28th Annual Symposium on Hispanic and Luso-Brazilian Literature, Language and Culture. [Video](https://youtube.com/watch?v=PMPfRFwH1Qw). [Slides (sent)](https://lukesmith.xyz/dox/ling/luke_imperfect).
-+ Scope without Syntax: Towards a Game Theoretic Approach. 2017. UofA Synsalon. [Slides](https://lukesmith.xyz/dox/ling/luke_synsalon.pdf).
-+ Language as Synesthesia. 2017. Tom Bever's Seminar on language and consciousness. [Video](https://youtube.com/watch?v=he4-K3Ir1PY). [Slides](https://lukesmith.xyz/dox/etc/luke_synesthesia.pdf).
-+ Towards Biolinguistic Clarity in Generative Syntax. 2015. The Interdisciplinary Linguististics Conference at UGA.
-+ Syntax is for Real! Parameterization of Head Movement in Korean and its Effects on Scope and Alternations. 2015. LSUGA Tiny Talks.
-+ External Possession and the Undisentanglability of Syntax and Semantics. 2015. University of Georgia Linguistics Program Spring Colloquium.
-+ The acquisition of *tú* and *usted* by English Speakers: A study of non-native knowledge and usage of forms of address. 2013. Georgia State Undergraduate Research Conference.
-+ Theories of contraction: A survey of macroeconomic theories of depression. 2012. Georgia State Undergraduate Research Conference.
-
-## Guest Lectures
-
-This list in non-exhaustive. I've made available some of the slides from the talks, but in many cases I use slides only as a visual aid, so it might be unclear what I'm saying looking at the slides alone.
-
-+ Linguistics Isn't 60 Years Old!: Pāṇinian Approaches to the Syntax and Semantics of Natural Language. 2018. For Simin Karimi's *Major Works in Syntax* class. [Video](https://youtube.com/watch?v=8yZ91YUdRfY).
-+ Quantifier Scope is Just All Fun and Games! Linguistics Department Graduate Student Showcase. 2018. [Video](https://youtube.com/watch?v=5w_PMpQiGL0).
-+ The Origins and Mechanics of the Greek Alphabet. 2017. For Shannon Grippando's *The Psychology of Writing Systems* class. [Handout](https://lukesmith.xyz/dox/etc/greek_alphabet.pdf).
-+ The Phonetics of Language. 2016. For Amy Fountain's *Language* class.
-+ Constituent Structure---What is it and where does it come from?. 2016. For Simin Karimi's *Introduction to Syntax* class. [Some slides](https://lukesmith.xyz/dox/300/luke_constituency_300.pdf).
-+ An Introduction to Minimalism. 2016. For Doug Merchant's *Generative Syntax* class. [Slides](https://lukesmith.xyz/dox/etc/luke_doug_min.pdf).
-+ Optimizing Structure. 2016. For Doug Merchant's *Generative Syntax* class. [Slides](https://lukesmith.xyz/dox/etc/luke_doug_allphon.pdf).
-+ Syntactic Theory and Psycholinguistics. 2015. For Doug Mercant's *Psychology of Language* class. [Slides](https://lukesmith.xyz/dox/etc/syn_psycho.pdf).
-
-# Languages
-
-## Human
-
-Spanish, Mandarin, Latin, some Persian and French, reading knowledge of Classical/Koiné Greek and most Romance languages, grammatical knowledge of many Indo-European languages, Korean, and others.
-
-## Machine
-
-Python, Perl, R, PHP, Matlab/GNU Octave, bash/shell, some superficial knowledge of C, common LISP and Haskel; markup languages including LaTeX, XeLaTeX , R Markdown, HTML and CSS.
-
-# Computing
-
-## Code
-
-+ mutt and offlineIMAP wizard. [Github](https://githib.com/lukesmithxyz/mutt-wizard).
-: A tool for setting up a fully featured personal mail system and offlineIMAP server, with GPG secured passwords, server detection and support for notmuch mail indexing and autosyncing with notification.
-+ shortcut-sync. [Github](https://github.com/lukesmithxyz/shortcut-sync).
-+ Corpus Latinum Lucae. [Github](https://github.com/lukesmithxyz/corpus-latinum).
-: (Still in progress.) A planned Latin corpus to be searchable by regexes. Right now, I've developed a part of speech tagger based on Whitacker's WORDS and some systems for converting Latin HTML files into tagged text documents.
-+ voidrice. [Github](https://github.com/lukesmithxyz/voidrice).
-: My most popular item on Github, dotfiles for an i3-gaps based Linux system. This is my personal config which is employed by LARBS.
-+ LARBS (Luke's Auto-Ricing Bootstrapping Scripts). [Github](https://github.com/lukesmithxyz/larbs). [Website](https://larbs.xyz).
-: A series of scripts that automatically configures a full-featured vim and i3-gaps-based GNU/Linux system on Arch Linux or derived distributions.
-
-## Tools I Use
-
-I have lots of tutorials on many of these programs and tools on my [my YouTube channel](https://youtube.com/c/lukesmithxyz).
-
-### Usual Workflow
-
-I use a **vim**-based setup in a tiling window manager (**i3-gaps**). I compile documents using **R Markdown** or **LaTeX**, and **biber** for references.
-I prefer multimedia manipulation in the terminal with tools like **imagemagick** and **ffmpeg** for extensibilitiy's sake.
-I've run Microsoft Windows, Mac OS X and GNU/Linux systems (both Debian and Arch-based varieties, as well as Void Linux).
-
-### Programs I'm familiar with.
-
-tmux, ssh, RStudio, Blender (mostly for video-editing), Praat, Audacity, E-Prime, GIMP, pandoc, Jupyter. I've managed websites manually via ssh and vim using HTML/CSS/PHP and with tools such as Github Pages (Jekyll) WordPress via either cpanel or wp-cli. Some experience with myBB.
+>## **_Basics Of User Interface:_**
 
 
-# Writings
+The whole concept of Android User Interface is defined using the hierarchy of View and ViewGroup objects. A ViewGroup is an invisible container that organizes child views. These child views are other widgets which are used to make the different parts of UI. One ViewGroup can have another ViewGroup as an child element as shown in the figure given below:
 
-On the HTML version, scroll over for a summary.
+<!-- Images -->
 
-+ A Critique of "Reason". [PDF](https://github.com/LukeSmithxyz/critique-of-reason/blob/master/rational.pdf).
-: A critique of the "Heuristics and Biases" approach to cognition usually associated withe Kahnemann and Tversky. I argue for a variety of ecological rationality, stating that tendencies which seem irrational in experimental conditions are not in the real world, but also that heuristics and biases are all constuable as mental *models* which differ only in scale, where there are often negative returns to scale, making simple heuristics preferable to so-called "optimization".
+![Basics Of User Interface](./Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg)
 
-+ Scope Without Syntax: A Game Theoretic Approach. [PDF](https://github.com/LukeSmithxyz/scope-without-syntax/blob/master/prelim2.pdf).
-: Second qualifying paper. 2017.
-: A Game Theoretic analysis of quantifier scope, arguing that possible scope interpretations fall out from pragmatic assumptions about speaker/hearer intention. One empirical claim is that syntactic rigidity should universally correlate with scope ambiguity, while flexible languages/constructions tend to be scopally non-ambiguous.
+<!--
++ Image credit to  [Basics Of User Interface](https://abhiandroid.com/ui/wp-content/uploads/2016/06/Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg).
+-->
+Here in above Diagram ViewGroup (Linear Layout) contains one ViewGroup (i.e. Relative Layout)and two View(Button and TextView). Further two more View (i.e. 2 EditText ) are nested inside Relative Layout ViewGroup. It is important to note that one layout can be nested in another layout.
 
-+ Syntax Without Syntax. [PDF](https://github.com/LukeSmithxyz/syntax-without-syntax/blob/master/prelim.pdf).
-: First qualifying paper. 2017.
-: Language differences in syntactic word order can be modeled as falling out from otherwise independent prosodic constraints (modeled Optimality Theoretically). Each language has a prosodic pattern and sentential constituents are placed optimally in that template. This avoid grammar overgeneralization that occurs in Halle and Vergnaud.
+The below code snippet will explain the above image in better way. Paste it in activity_main.xml
 
-+ External Possession and the Undisentanglability of Syntax and Semantics. [PDF](https://lukesmith.xyz/thesis.pdf).
-: Master's Thesis. 2015.
-: Many languages have external possession constructions which may be possessive datives, incorporated possessa or other types, but all with an affected possessor abide by subtlely similar syntactic constraints, always disallowing EP from agentive clauses. This is argued to be due to an inherent thematic/semantic hierarchy in the "syntax".
-
-+ Indo-European Particles and Head-Movement-driven Word Order Change. [PDF](https://lukesmith.xyz/dox/ling/luke_pie_wordorder.pdf).
-: An informal squib arguing that word order differences in Indo-European languages were historically telegraphed by particle placement, and verbs moved to unify with particles. I.e. languages with initial  particles gradually shifted to be VSO, languages with second position particles moved to being V2 and later SVO.
-
-+ Scope Markings and Series Phrase Parsing. [PDF](https://lukesmith.xyz/dox/ling/luke_scopemarking.pdf).
-: A crazy idea about scope marking, arguing that if we take a serial approach to prosodification, the vexxing construction of scope marking may in fact be a repair strategy to meet a general desire of the language faculty to group together a question word with where it takes scope, based on an intuition similar to N. Richards' Contiguity Theory.
-
-+ Syntax is Just a Phonological Construct! [PDF](https://lukesmith.xyz/dox/ling/luke_worder.pdf).
-: A precursor write-up to the "Syntax without syntax" paper above.
-
-+ Some countercyclic problems at the nexus of phonology and syntax. [PDF](https://lukesmith.xyz/dox/ling/luke_countercyclic.pdf).
-: A brief write-up ennumerating some aspects of syntax which are tied into prosody/phonology/semantics and how generally they produce counter-cyclicity problems for Generative Grammar and any "Y-modeled" grammar.
-+ Accomodating phonological structure: Extraposition, the EPP and trace effects. [PDF](https://lukesmith.xyz/dox/ling/luke_synphon.pdf).
-: Probably the first "syntax is just phonology" paper I wrote, a term paper. I detail the mismatch between semantic and prosodic structure as the origin of syntactic movement, etc.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:orientation="vertical" android:layout_width="match_parent"
+ android:layout_height="match_parent">
 
 
-# Service
+ <Button
+ android:id="@+id/buton1"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:text="Button"/>
 
-## University of Arizona
+ <TextView
+ android:id="@+id/textView1"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:text="sample Text"
+ android:layout_marginTop="15dp"
+ android:textSize="30dp"/>
 
-+ Coyote Papers Editor for the 2018 Arizona Lingusitics Circle.
-+ Creator and manager of Tom Bever's Language and Cognition Lab site: [coglanglab.com](http://coglanglab.com).
-+ Arizona Linguistics Circle Peer-Reviewer 2017.
-+ Indo-European Reading Group Director. 2015--2016.
+ <RelativeLayout
+ android:layout_width="match_parent"
+ android:layout_height="match_parent">
 
-## University of Georgia
+ <EditText
+ android:id="@+id/editTextName"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:hint="First Name"
+ />
 
-+ LSUGA Website Manager. 2014--2016.
-+ LSUGA Interdisciplinary Conference in Linguistics Committee Member. 2014--2015.
-+ Graduate Student Mentor. 2014--2015.
-+ Socio-Paths Sociolingusitics Reading Group Co-Director. 2014.
-+ Typology Reading Group Director. 2014.
+ <EditText
+ android:id="@+id/editTextLastName"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:hint="Last Name"/>
+
+ </RelativeLayout>
+</LinearLayout>
+```
+
+![Basics Android UI](./XML-UI-in-Android-with-example.jpg "Basics Android UI")
+
+
+
+
+
+# Different XML Files Used in Android:
+
+> ## **_Different XML Files Used in Android:_**
+
+In Android there are several xml files used for several different purposes. Below we define each and every one.
+
+## 1. Layout XML Files:
+
+ Layout xml files are used to define the actual UI(User interface) of our application. It holds all the elements(views) or the tools that we want to use in our application. Like the TextView’s, Button’s and other UI elements.
+
+ ### Location in Android Studio:
+You will find out this file inside the res folder and inside it there is another folder named layout where you will get all the layout files for their respective activities or fragments.
+
+![Basics Android UI](./Layout-XML-in-Android-Studio.jpg "Layout XML Files")
+
+### Basic Layout XML Code:
+Below we show activity_main.xml file in which we have two TextView’s.
+
+``` xml
+
+<!--  RelativeLayout in which we set green color for the background -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/greenColor"
+tools:context=".MainActivity">
+
+<TextView
+android:id="@+id/firstTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"
+android:layout_margin="20dp"
+android:padding="10dp"
+android:text="First Text View"
+android:textColor="@color/white"
+android:textSize="20sp"
+android:textStyle="bold" />
+<!-- second TextView -->
+<TextView
+android:id="@+id/secondTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/firstTextView"
+android:layout_centerHorizontal="true"
+android:layout_margin="20dp"
+android:padding="10dp"
+android:text="Second Text View"
+android:textColor="@color/white"
+android:textSize="20sp"
+android:textStyle="bold" />
+
+</RelativeLayout>
+
+``` 
+
+## 2. Manifest xml File (Mainfest.xml):
+
+ This xml is used to define all the components of our application. It includes the names of our application packages, our Activities, receivers, services  and the permissions that our application needs. For Example – Suppose we need to use internet in our app then we need to define Internet permission in this file.
+
+####  Location in Android Studio:
+
+It is located inside app > manifests folder 
+
+![AndroidManifest-xml-location-in-Android-Studio](./AndroidManifest-xml-location-in-Android-Studio.jpg "manifests folder")
+
+
+### Defining Internet Permission in AndroidManifest.xml
+
+Below we show the AndroidManifest.xml file and define the Internet Permission in that file.
+
+```XML
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="example.abhiandroid.MyApplication">     <!-- application package name -->
+
+<uses-permission android:name="ANDROID.PERMISSION.INTERNET" />
+<!-- define Internet Permission -->
+<application
+android:allowBackup="true"
+android:icon="@mipmap/ic_launcher"
+android:label="@string/app_name"
+android:theme="@style/AppTheme">
+
+<!-- add your Activities, Receivers, Services Names Here -->
+<activity
+android:name=".MainActivity"
+android:label="@string/app_name">
+<intent-filter>
+<action android:name="android.intent.action.MAIN" />
+
+<category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+</activity>
+</application>
+
+</manifest>
+
+```
+
+  ## 3. Strings xml File(strings.xml):
+ This xml file is used to replace the Hard-coded strings with a single string. We define all the strings in this xml file and then access them in our app(Activity or in  Layout XML files) from this file. This file enhance the reusability of the code.
+
+### Location in Android Studio:
+
+![strings-xml-location-android-studio](./strings-xml-location-android-studio.jpg "strings-xml-location-android-studio")
+
+
+> Below we show strings.xml file and define a string in the file.
+
+```xml
+<resources>
+<string name="app_name">My Application</string>
+
+<string name="hello_world">Hello world!</string>
+<string name="action_settings">Settings</string>
+<string name="login">User Login</string>
+<!-- define your strings here -->
+</resources>
+
+```
+
+## 4. Styles xml File(styles.xml): 
+This xml is used to define different styles and looks for the UI(User Interface) of application. We define our custom themes and styles in this file.
+
+### Location in Android Studio:
+
+
+![styles-location-xml-Android-Studio-1](./styles-location-xml-Android-Studio-1.jpg "styles-location-xml-Android-Studio-1")
+
+> Below we show the style.xml file.
+
+```xml
+<resources>
+<!-- Base application theme. -->
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+<!-- Customize your theme here. -->
+</style>
+
+</resources>
+
+```
+## 5. Drawable xml Files: 
+These are those xml files that are used to provide various graphics to the elements or views of application. When we need to create a custom UI we use drawable xml files. Suppose if we need to define a gradient color in the background of Button or any custom shape for a view then we create a Drawable xml file and set it in the background of View.
+
+>>> Do Read: How To Create Drawable Resource XML File in Android Studio 
+
+> Below we show custom_drawable.xml file and create a gradient background color using style attribute.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- define start, center and end color for gradient -->
+<gradient
+android:centerColor="#0f0"
+android:endColor="#00f"
+android:startColor="#f00" />
+</shape>
+```
+
+## 6. Color xml File (colors.xml):
+ This file is used to define the color codes that we used in our app. We simply define the color’s in this file and used them in our app from this file.
+
+### Location in Android Studio
+
+
+![colors-xml-location-Android-Studio](./colors-xml-location-Android-Studio.jpg "colors-xml-location-Android-Studio")
+
+> Below we show the colors.xml file in which we define green and white color.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- define your colors Here -->
+<color name="greenColor">#0f0</color>
+<color name="white">#fff</color>
+</resources>
+```
+## 7. Dimension xml File(dimens.xml):
+ This xml file is used to define the dimensions of the View’s. Suppose we need a Button with 50dp(density pixel) height then we define the value 50dp in dimens.xml file and then use it in our app from this file.
+
+### Location in Android Studio:
+
+
+![Dimension-xml-File-in-Android-Studio](./Dimension-xml-File-in-Android-Studio.jpg "Dimension-xml-File-in-Android-Studio")
+
+> Below we show the dimens.xml file in which we define 50dp  dimension for Button height.
+
+```xml
+<resources>
+<!-- Default screen margins, per the Android Design guidelines. -->
+<dimen name="activity_horizontal_margin">16dp</dimen>
+<dimen name="activity_vertical_margin">16dp</dimen><dimen name="btnheight">50dp</dimen>
+</resources>
+```
+
+# HOME [digitalbd.org](https://digitalbd.org) 
+
+# Contact
+
++ Email    : [shyed2001@gmail.com](mailto:shyed2001@gmail.com)
+
++ Website  : [https://digitalbd.org](https://digitalbd.org)
+
++ Github   : [https://github.com/shyed2001](https://github.com/shyed2001)
+
++ LinkedIn : [https://www.linkedin.com/in/shyed-shahriar-housaini](https://www.linkedin.com/in/shyed-shahriar-housaini) 
+
++ MyCV     : [https://digitalbd.org/MyCV.html](https://digitalbd.org/MyCV.html)
