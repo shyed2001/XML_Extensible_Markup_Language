@@ -1,0 +1,3 @@
+compile:
+	pandoc indexXML.md -s -c styleXML.css --toc -o indexXML.html
+	pandoc indexXML.md --template=template.tex --pdf-engine=xelatex -o indexXML.pdf
