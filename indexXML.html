@@ -93,29 +93,49 @@
 <ul>
 <li><a href="#basics">Basics</a></li>
 </ul></li>
+<li><a href="#একসএমএল">এক্সএমএল</a>
+<ul>
+<li><a href="#মল-কথ">মূল কথা</a></li>
+</ul></li>
 <li><a href="#different-xml-files-used-in-android">Different XML Files Used in Android:</a>
 <ul>
-<li><a href="#layout-xml-files">1. Layout XML Files:</a>
+<li><a href="#layout-xml-files">1. Layout XML Files:</a></li>
+<li><a href="#লআউট-একসএমএল-ফইলগল">1. লেআউট এক্সএমএল ফাইলগুলি:</a>
 <ul>
 <li><a href="#basic-layout-xml-code">Basic Layout XML Code:</a></li>
 </ul></li>
-<li><a href="#manifest-xml-file-mainfest.xml">2. Manifest xml File (Mainfest.xml):</a>
+<li><a href="#manifest-xml-file-mainfest.xml">2. Manifest xml File (Mainfest.xml):</a></li>
+<li><a href="#মযনফসট-একসএমএল-ফইল-মইনফসট.একসএমএল">2. ম্যানিফেস্ট এক্সএমএল ফাইল (মেইনফেস্ট.এক্সএমএল):</a>
 <ul>
 <li><a href="#defining-internet-permission-in-androidmanifest.xml">Defining Internet Permission in AndroidManifest.xml</a></li>
-<li><a href="#location-in-android-studio-1">Location in Android Studio:</a></li>
+<li><a href="#location-in-android-studio">Location in Android Studio:</a></li>
+<li><a href="#অযনডরযড-সটডওত-অবসথন-1">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:</a></li>
 </ul></li>
 <li><a href="#styles-xml-filestyles.xml">4. Styles xml File(styles.xml):</a>
 <ul>
-<li><a href="#location-in-android-studio-2">Location in Android Studio:</a></li>
+<li><a href="#location-in-android-studio-1">Location in Android Studio:</a></li>
+</ul></li>
+<li><a href="#সটইলস-একসএমএল-ফইল-শল-একসএমএল">4. স্টাইলস এক্সএমএল ফাইল (শৈলী। এক্সএমএল):</a>
+<ul>
+<li><a href="#অযনডরযড-সটডওত-অবসথন-2">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:</a></li>
 </ul></li>
 <li><a href="#drawable-xml-files">5. Drawable xml Files:</a></li>
+<li><a href="#অঙকনযগয-একসএমএল-ফইল">5. অঙ্কনযোগ্য এক্সএমএল ফাইল:</a></li>
 <li><a href="#color-xml-file-colors.xml">6. Color xml File (colors.xml):</a>
 <ul>
-<li><a href="#location-in-android-studio-3">Location in Android Studio</a></li>
+<li><a href="#location-in-android-studio-2">Location in Android Studio</a></li>
+</ul></li>
+<li><a href="#রঙন-একসএমএল-ফইল-color.xml">6. রঙিন এক্সএমএল ফাইল (color.xML):</a>
+<ul>
+<li><a href="#অযনডরযড-সটডওত-অবসথন-3">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান</a></li>
 </ul></li>
 <li><a href="#dimension-xml-filedimens.xml">7. Dimension xml File(dimens.xml):</a>
 <ul>
-<li><a href="#location-in-android-studio-4">Location in Android Studio:</a></li>
+<li><a href="#location-in-android-studio-3">Location in Android Studio:</a></li>
+</ul></li>
+<li><a href="#মতর-একসএমএল-ফইল-dimens.xml">7. মাত্রা এক্সএমএল ফাইল (dimens.xML):</a>
+<ul>
+<li><a href="#অযনডরযড-সটডওত-অবসথন-4">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#home-digitalbd.org">HOME <span>digitalbd.org</span></a></li>
@@ -123,7 +143,7 @@
 </ul>
 </nav>
 <hr />
-<p>title: XML Extensible Markup Language.</p>
+<p>title: XML Extensible Markup Language এক্সএমএল_ এক্সটেনসিবল মার্কআপ ল্যাঙ্গুয়েজ এবং অ্যান্ড্রয়েডে এক্সএমএল .</p>
 <p>author : by Shyed Shahriar Housaini.</p>
 <p>linkcolor: blue</p>
 <p>pdf-engine: xelatex</p>
@@ -153,6 +173,22 @@ header-includes: -
 <h2 id="basics-of-user-interface"><strong><em>Basics Of User Interface:</em></strong></h2>
 </blockquote>
 <p>The whole concept of Android User Interface is defined using the hierarchy of View and ViewGroup objects. A ViewGroup is an invisible container that organizes child views. These child views are other widgets which are used to make the different parts of UI. One ViewGroup can have another ViewGroup as an child element as shown in the figure given below:</p>
+<h1 id="একসএমএল">এক্সএমএল</h1>
+<blockquote>
+<h2 id="একসএমএল-_">** _ এক্সএমএল: _ **</h2>
+</blockquote>
+<p>এক্সএমএল মানে এক্সটেনসিবল মার্কআপ ল্যাঙ্গুয়েজ। এক্সএমএল হ’ল এইচটিএমএলের মতো ডেটা বর্ণনার জন্য ব্যবহৃত একটি মার্কআপ ভাষা। এক্সএমএল ট্যাগগুলি এক্সএমএলে পূর্বনির্ধারিত নয়। আমাদের অবশ্যই নিজের ট্যাগ সংজ্ঞায়িত করতে হবে। এক্সএমএল নিজে এবং মানুষ এবং মেশিন উভয়ই ভালভাবে পঠনযোগ্য। এছাড়াও এটি বিকাশযোগ্য এবং সহজ is অ্যান্ড্রয়েডে আমরা আমাদের লেআউটগুলি ডিজাইনের জন্য এক্সএমএল ব্যবহার করি কারণ এক্সএমএল হালকা ওজনের ভাষা তাই এটি আমাদের লেআউটটিকে ভারী করে না।</p>
+<p>………….</p>
+<p>………………</p>
+<p>……………………….</p>
+<p>………………………………….</p>
+<p>………………………………………….. …</p>
+<p>অ্যান্ড্রয়েডে # এক্সএমএল: &gt; ## ** _ অ্যান্ড্রয়েডে এক্সএমএল: _ **</p>
+<h3 id="মল-কথ">মূল কথা</h3>
+<blockquote>
+<h1 id="অযনডরযড-বযবহত-বসক-এব-বভনন-একসএমএল-ফইল-_">** _ অ্যান্ড্রয়েডে ব্যবহৃত বেসিক এবং বিভিন্ন এক্সএমএল ফাইল _ **</h1>
+</blockquote>
+<p>এই নিবন্ধে আমরা অ্যান্ড্রয়েডে এক্সএমএল এবং অ্যান্ড্রয়েডে বিভিন্ন উদ্দেশ্যে ব্যবহৃত বিভিন্ন এক্সএমএল ফাইলের প্রাথমিক ধারণাগুলি নিয়ে যাব। এটি আপনাকে আপনার পছন্দসই ইউজার ইন্টারফেসটি ডিজাইন করতে একটি ইউআই কোড রচনায় সহায়তা করবে।</p>
 <!-- Images -->
 <figure>
 <img src="./Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg" alt="Basics Of User Interface" /><figcaption aria-hidden="true">Basics Of User Interface</figcaption>
@@ -161,7 +197,9 @@ header-includes: -
 + Image credit to  [Basics Of User Interface](https://abhiandroid.com/ui/wp-content/uploads/2016/06/Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg).
 -->
 <p>Here in above Diagram ViewGroup (Linear Layout) contains one ViewGroup (i.e. Relative Layout)and two View(Button and TextView). Further two more View (i.e. 2 EditText ) are nested inside Relative Layout ViewGroup. It is important to note that one layout can be nested in another layout.</p>
-<p>The below code snippet will explain the above image in better way. Paste it in activity_main.xml</p>
+<p>উপরের চিত্রগুলিতে ভিউগ্রুপ (লিনিয়ার লেআউট) এর মধ্যে একটি ভিউ গ্রুপ (অর্থাত্ রিলেটিভ লেআউট) এবং দুটি ভিউ (বাটন এবং টেক্সটভিউ) রয়েছে। আরও দুটি ভিউ (অর্থাত্ 2 এডিটেক্সট) রিলেটিভ লেআউট ভিউগ্রুপের ভিতরে বাসাযুক্ত। এটি লক্ষ করা গুরুত্বপূর্ণ যে একটি বিন্যাস অন্য লেআউটে নেস্ট করা যায়।</p>
+<p>নীচের কোড স্নিপেট উপরের চিত্রটি আরও ভালভাবে ব্যাখ্যা করবে। এটিকে কার্যকলাপ_মাইন.এক্সএম এ আটকান</p>
+<p>The below code snippet will explain the above image in better way. Paste it in activity_main.xm</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">LinearLayout</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ot"> android:orientation=</span><span class="st">&quot;vertical&quot;</span><span class="ot"> android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
@@ -215,8 +253,11 @@ header-includes: -
 <figure>
 <img src="./Layout-XML-in-Android-Studio.jpg" title="Layout XML Files" alt="Basics Android UI" /><figcaption aria-hidden="true">Basics Android UI</figcaption>
 </figure>
+<h2 id="লআউট-একসএমএল-ফইলগল">1. লেআউট এক্সএমএল ফাইলগুলি:</h2>
+<p>লেআউট এক্সএমএল ফাইলগুলি আমাদের অ্যাপ্লিকেশনটির প্রকৃত ইউআই (ইউজার ইন্টারফেস) সংজ্ঞায়িত করতে ব্যবহৃত হয়। এটি আমাদের অ্যাপ্লিকেশনটিতে সমস্ত উপাদান (দর্শন) বা সরঞ্জামগুলি ব্যবহার করতে চাই যা এটি ধারণ করে। টেক্সটভিউ, বোতাম এবং অন্যান্য ইউআই উপাদানগুলির মতো।</p>
+<p>### অ্যান্ড্রয়েড স্টুডিওতে অবস্থান: আপনি এই ফাইলটি রেজোল্ড ফোল্ডারের ভিতরে খুঁজে পাবেন এবং এর ভিতরে অন্য একটি ফোল্ডার রয়েছে যার নাম লেআউট রয়েছে যেখানে আপনি তাদের নিজ নিজ ক্রিয়াকলাপ বা টুকরো জন্য সমস্ত লেআউট ফাইল পাবেন।</p>
 <h3 id="basic-layout-xml-code">Basic Layout XML Code:</h3>
-<p>Below we show activity_main.xml file in which we have two TextView’s.</p>
+<p>Below we show activity_main.xml file in which we have two TextView’s. ### বেসিক লেআউট এক্সএমএল কোড: নীচে আমরা ক্রিয়াকলাপ_মাইন.এক্সএমএল ফাইলটি প্রদর্শন করি যেখানে আমাদের দুটি পাঠ্যদর্শন রয়েছে।</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--  RelativeLayout in which we set green color for the background --&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">RelativeLayout</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
@@ -254,13 +295,17 @@ header-includes: -
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">RelativeLayout</span>&gt;</span></code></pre></div>
 <h2 id="manifest-xml-file-mainfest.xml">2. Manifest xml File (Mainfest.xml):</h2>
 <p>This xml is used to define all the components of our application. It includes the names of our application packages, our Activities, receivers, services and the permissions that our application needs. For Example – Suppose we need to use internet in our app then we need to define Internet permission in this file.</p>
-<h4 id="location-in-android-studio">Location in Android Studio:</h4>
+<h2 id="মযনফসট-একসএমএল-ফইল-মইনফসট.একসএমএল">2. ম্যানিফেস্ট এক্সএমএল ফাইল (মেইনফেস্ট.এক্সএমএল):</h2>
+<p>এই এক্সএমএলটি আমাদের অ্যাপ্লিকেশনটির সমস্ত উপাদান সংজ্ঞায়িত করতে ব্যবহৃত হয়। এটিতে আমাদের অ্যাপ্লিকেশনগুলির প্রয়োজনীয় প্যাকেজগুলির নাম, আমাদের ক্রিয়াকলাপ, রিসিভার, পরিষেবা এবং আমাদের অ্যাপ্লিকেশনটির প্রয়োজনীয় অনুমতি রয়েছে। উদাহরণস্বরূপ - ধরুন আমাদের অ্যাপ্লিকেশনটিতে আমাদের ইন্টারনেট ব্যবহার করা প্রয়োজন তবে আমাদের এই ফাইলে ইন্টারনেটের অনুমতি নির্ধারণ করতে হবে।</p>
+<h4 id="অযনডরযড-সটডওত-অবসথন">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:</h4>
+<p>এটি অ্যাপের ভিতরে অবস্থিত&gt; ফোল্ডারটি প্রকাশ করে #### Location in Android Studio:</p>
 <p>It is located inside app &gt; manifests folder</p>
 <figure>
 <img src="./AndroidManifest-xml-location-in-Android-Studio.jpg" title="manifests folder" alt="AndroidManifest-xml-location-in-Android-Studio" /><figcaption aria-hidden="true">AndroidManifest-xml-location-in-Android-Studio</figcaption>
 </figure>
 <h3 id="defining-internet-permission-in-androidmanifest.xml">Defining Internet Permission in AndroidManifest.xml</h3>
-<p>Below we show the AndroidManifest.xml file and define the Internet Permission in that file.</p>
+<p>Below we show the AndroidManifest.xml file and define the Internet Permission in that file. ### অ্যান্ড্রয়েড ম্যানিফেস্ট.এক্সএমএলে ইন্টারনেট অনুমতি নির্ধারণ করা</p>
+<p>নীচে আমরা অ্যান্ড্রয়েড ম্যানিফেস্ট.এক্সএমএল ফাইলটি দেখাই এবং সেই ফাইলটিতে ইন্টারনেট অনুমতি সংজ্ঞায়িত করি।</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">manifest</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
@@ -288,13 +333,16 @@ header-includes: -
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">manifest</span>&gt;</span></code></pre></div>
 <p>## 3. Strings xml File(strings.xml): This xml file is used to replace the Hard-coded strings with a single string. We define all the strings in this xml file and then access them in our app(Activity or in Layout XML files) from this file. This file enhance the reusability of the code.</p>
-<h3 id="location-in-android-studio-1">Location in Android Studio:</h3>
+<h3 id="location-in-android-studio">Location in Android Studio:</h3>
+<p>321 / 5000 Translation results ## 3. স্ট্রিংস এক্সএমএল ফাইল (স্ট্রিং.এক্সএমএল): এই এক্সএমএল ফাইলটি হার্ড-কোডেড স্ট্রিংগুলিকে একক স্ট্রিংয়ের সাথে প্রতিস্থাপন করতে ব্যবহৃত হয়। আমরা এই এক্সএমএল ফাইলে সমস্ত স্ট্রিং সংজ্ঞায়িত করেছি এবং তারপরে এই ফাইলটি থেকে আমাদের অ্যাপে (ক্রিয়াকলাপ বা লেআউট এক্সএমএল ফাইলগুলিতে) অ্যাক্সেস করব। এই ফাইলটি কোডের পুনঃব্যবহারযোগ্যতা বাড়ায়।</p>
+<h3 id="অযনডরযড-সটডওত-অবসথন-1">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:</h3>
 <figure>
 <img src="./strings-xml-location-android-studio.jpg" title="strings-xml-location-android-studio" alt="strings-xml-location-android-studio" /><figcaption aria-hidden="true">strings-xml-location-android-studio</figcaption>
 </figure>
 <blockquote>
 <p>Below we show strings.xml file and define a string in the file.</p>
 </blockquote>
+<p>65 / 5000 Translation results &gt; নীচে আমরা স্ট্রিং.এক্সএমএল ফাইল দেখি এবং ফাইলটিতে একটি স্ট্রিং সংজ্ঞায়িত করি।</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resources</span>&gt;</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">string</span><span class="ot"> name=</span><span class="st">&quot;app_name&quot;</span>&gt;My Application&lt;/<span class="kw">string</span>&gt;</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -305,12 +353,15 @@ header-includes: -
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">resources</span>&gt;</span></code></pre></div>
 <h2 id="styles-xml-filestyles.xml">4. Styles xml File(styles.xml):</h2>
 <p>This xml is used to define different styles and looks for the UI(User Interface) of application. We define our custom themes and styles in this file.</p>
-<h3 id="location-in-android-studio-2">Location in Android Studio:</h3>
+<h3 id="location-in-android-studio-1">Location in Android Studio:</h3>
+<h2 id="সটইলস-একসএমএল-ফইল-শল-একসএমএল">4. স্টাইলস এক্সএমএল ফাইল (শৈলী। এক্সএমএল):</h2>
+<p>এই এক্সএমএলটি বিভিন্ন স্টাইল সংজ্ঞায়িত করতে ব্যবহৃত হয় এবং অ্যাপ্লিকেশনটির ইউআই (ইউজার ইন্টারফেস) সন্ধান করে। আমরা এই ফাইলটিতে আমাদের কাস্টম থিম এবং শৈলীর সংজ্ঞা দিই।</p>
+<h3 id="অযনডরযড-সটডওত-অবসথন-2">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:</h3>
 <figure>
 <img src="./styles-location-xml-Android-Studio-1.jpg" title="styles-location-xml-Android-Studio-1" alt="styles-location-xml-Android-Studio-1" /><figcaption aria-hidden="true">styles-location-xml-Android-Studio-1</figcaption>
 </figure>
 <blockquote>
-<p>Below we show the style.xml file.</p>
+<p>Below we show the style.xml file. নীচে আমরা স্টাইল.এক্সএমএল ফাইলটি দেখাব।</p>
 </blockquote>
 <div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resources</span>&gt;</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Base application theme. --&gt;</span></span>
@@ -331,6 +382,18 @@ header-includes: -
 <blockquote>
 <p>Below we show custom_drawable.xml file and create a gradient background color using style attribute.</p>
 </blockquote>
+<h2 id="অঙকনযগয-একসএমএল-ফইল">5. অঙ্কনযোগ্য এক্সএমএল ফাইল:</h2>
+<p>এটি সেইগুলি এক্সএমএল ফাইল যা অ্যাপ্লিকেশনের উপাদানগুলি বা দর্শনের বিভিন্ন গ্রাফিক্স সরবরাহ করতে ব্যবহৃত হয়। যখন আমাদের একটি কাস্টম ইউআই তৈরি করা দরকার তখন আমরা অঙ্কনযোগ্য এক্সএমএল ফাইল ব্যবহার করি। মনে করুন আমাদের যদি দেখার জন্য বাটনের পটভূমিতে কোনও গ্রেডিয়েন্ট রঙ বা কোনও কাস্টম শেপ সংজ্ঞায়িত করতে হয় তবে আমরা একটি অঙ্কনযোগ্য এক্সএমএল ফাইল তৈরি করব এবং এটি ভিউ এর পটভূমিতে সেট করব।</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>পড়ুন: অ্যান্ড্রয়েড স্টুডিওতে কীভাবে ড্রয়যোগ্য রিসোর্স এক্সএমএল ফাইল তৈরি করবেন</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>নীচে আমরা কাস্টম_ড্রেবেবল.এক্সএমএল ফাইল দেখি এবং শৈলীর বৈশিষ্ট্য ব্যবহার করে গ্রেডিয়েন্ট পটভূমি রঙ তৈরি করি।</p>
+</blockquote>
 <div class="sourceCode" id="cb6"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">shape</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span>&gt;</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- define start, center and end color for gradient --&gt;</span></span>
@@ -341,7 +404,10 @@ header-includes: -
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">shape</span>&gt;</span></code></pre></div>
 <h2 id="color-xml-file-colors.xml">6. Color xml File (colors.xml):</h2>
 <p>This file is used to define the color codes that we used in our app. We simply define the color’s in this file and used them in our app from this file.</p>
-<h3 id="location-in-android-studio-3">Location in Android Studio</h3>
+<h3 id="location-in-android-studio-2">Location in Android Studio</h3>
+<h2 id="রঙন-একসএমএল-ফইল-color.xml">6. রঙিন এক্সএমএল ফাইল (color.xML):</h2>
+<p>এই ফাইলটি আমরা আমাদের অ্যাপ্লিকেশনটিতে যে রঙিন কোডগুলি ব্যবহার করেছি তা সংজ্ঞায়িত করতে ব্যবহৃত হয়। আমরা কেবল এই ফাইলটিতে রঙের সংজ্ঞা দিই এবং এই ফাইলটি থেকে আমাদের অ্যাপ্লিকেশনটিতে সেগুলি ব্যবহার করি।</p>
+<h3 id="অযনডরযড-সটডওত-অবসথন-3">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান</h3>
 <figure>
 <img src="./colors-xml-location-Android-Studio.jpg" title="colors-xml-location-Android-Studio" alt="colors-xml-location-Android-Studio" /><figcaption aria-hidden="true">colors-xml-location-Android-Studio</figcaption>
 </figure>
@@ -356,12 +422,18 @@ header-includes: -
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">resources</span>&gt;</span></code></pre></div>
 <h2 id="dimension-xml-filedimens.xml">7. Dimension xml File(dimens.xml):</h2>
 <p>This xml file is used to define the dimensions of the View’s. Suppose we need a Button with 50dp(density pixel) height then we define the value 50dp in dimens.xml file and then use it in our app from this file.</p>
-<h3 id="location-in-android-studio-4">Location in Android Studio:</h3>
+<h3 id="location-in-android-studio-3">Location in Android Studio:</h3>
+<h2 id="মতর-একসএমএল-ফইল-dimens.xml">7. মাত্রা এক্সএমএল ফাইল (dimens.xML):</h2>
+<p>এই এক্সএমএল ফাইলটি ভিউ’র মাত্রা নির্ধারণ করতে ব্যবহৃত হয়। মনে করুন আমাদের 50 ডিপি (ঘনত্বের পিক্সেল) উচ্চতার একটি বাটন প্রয়োজন তখন আমরা dimens.xML ফাইলে 50dp মানটি সংজ্ঞায়িত করি এবং তারপরে এই ফাইলটি থেকে আমাদের অ্যাপ্লিকেশনটিতে এটি ব্যবহার করি।</p>
+<h3 id="অযনডরযড-সটডওত-অবসথন-4">অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:</h3>
 <figure>
 <img src="./Dimension-xml-File-in-Android-Studio.jpg" title="Dimension-xml-File-in-Android-Studio" alt="Dimension-xml-File-in-Android-Studio" /><figcaption aria-hidden="true">Dimension-xml-File-in-Android-Studio</figcaption>
 </figure>
 <blockquote>
 <p>Below we show the dimens.xml file in which we define 50dp dimension for Button height.</p>
+</blockquote>
+<blockquote>
+<p>নীচে আমরা dimens.xML ফাইলটি দেখাই যেখানে আমরা বোতামের উচ্চতার জন্য 50dp মাত্রা নির্ধারণ করি।</p>
 </blockquote>
 <div class="sourceCode" id="cb8"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resources</span>&gt;</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Default screen margins, per the Android Design guidelines. --&gt;</span></span>

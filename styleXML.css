@@ -1,5 +1,15 @@
 /* Do not show subsubsections in menu: */
 
+.column {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .column {
+        width: 50%;
+    }
+}
+
 nav li li li {
     display: none !important;
 }

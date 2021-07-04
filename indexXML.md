@@ -1,9 +1,6 @@
-
-
-
 ---
 
-title: XML Extensible Markup Language. 
+title: XML Extensible Markup Language এক্সএমএল_ এক্সটেনসিবল মার্কআপ ল্যাঙ্গুয়েজ এবং অ্যান্ড্রয়েডে এক্সএমএল . 
 
 author : by  Shyed Shahriar Housaini.
 
@@ -50,6 +47,32 @@ In this article we will go through the basic concepts of xml in Android and diff
 
 The whole concept of Android User Interface is defined using the hierarchy of View and ViewGroup objects. A ViewGroup is an invisible container that organizes child views. These child views are other widgets which are used to make the different parts of UI. One ViewGroup can have another ViewGroup as an child element as shown in the figure given below:
 
+# এক্সএমএল
+> ## ** _ এক্সএমএল: _ **
+
+ এক্সএমএল মানে এক্সটেনসিবল মার্কআপ ল্যাঙ্গুয়েজ। এক্সএমএল হ'ল এইচটিএমএলের মতো ডেটা বর্ণনার জন্য ব্যবহৃত একটি মার্কআপ ভাষা। এক্সএমএল ট্যাগগুলি এক্সএমএলে পূর্বনির্ধারিত নয়। আমাদের অবশ্যই নিজের ট্যাগ সংজ্ঞায়িত করতে হবে। এক্সএমএল নিজে এবং মানুষ এবং মেশিন উভয়ই ভালভাবে পঠনযোগ্য। এছাড়াও এটি বিকাশযোগ্য এবং সহজ is অ্যান্ড্রয়েডে আমরা আমাদের লেআউটগুলি ডিজাইনের জন্য এক্সএমএল ব্যবহার করি কারণ এক্সএমএল হালকা ওজনের ভাষা তাই এটি আমাদের লেআউটটিকে ভারী করে না।
+
+.............
+
+..................
+
+............................
+
+........................................
+
+.................................................. ...
+
+অ্যান্ড্রয়েডে # এক্সএমএল:
+> ## ** _ অ্যান্ড্রয়েডে এক্সএমএল: _ **
+
+### মূল কথা
+
+> # ** _ অ্যান্ড্রয়েডে ব্যবহৃত বেসিক এবং বিভিন্ন এক্সএমএল ফাইল _ **
+
+
+এই নিবন্ধে আমরা অ্যান্ড্রয়েডে এক্সএমএল এবং অ্যান্ড্রয়েডে বিভিন্ন উদ্দেশ্যে ব্যবহৃত বিভিন্ন এক্সএমএল ফাইলের প্রাথমিক ধারণাগুলি নিয়ে যাব। এটি আপনাকে আপনার পছন্দসই ইউজার ইন্টারফেসটি ডিজাইন করতে একটি ইউআই কোড রচনায় সহায়তা করবে।
+
+
 <!-- Images -->
 
 ![Basics Of User Interface](./Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg)
@@ -57,9 +80,14 @@ The whole concept of Android User Interface is defined using the hierarchy of Vi
 <!--
 + Image credit to  [Basics Of User Interface](https://abhiandroid.com/ui/wp-content/uploads/2016/06/Basic-UI-user-interface-ViewGroup-and-View-Diagram.jpg).
 -->
+
 Here in above Diagram ViewGroup (Linear Layout) contains one ViewGroup (i.e. Relative Layout)and two View(Button and TextView). Further two more View (i.e. 2 EditText ) are nested inside Relative Layout ViewGroup. It is important to note that one layout can be nested in another layout.
 
-The below code snippet will explain the above image in better way. Paste it in activity_main.xml
+উপরের চিত্রগুলিতে ভিউগ্রুপ (লিনিয়ার লেআউট) এর মধ্যে একটি ভিউ গ্রুপ (অর্থাত্ রিলেটিভ লেআউট) এবং দুটি ভিউ (বাটন এবং টেক্সটভিউ) রয়েছে। আরও দুটি ভিউ (অর্থাত্ 2 এডিটেক্সট) রিলেটিভ লেআউট ভিউগ্রুপের ভিতরে বাসাযুক্ত। এটি লক্ষ করা গুরুত্বপূর্ণ যে একটি বিন্যাস অন্য লেআউটে নেস্ট করা যায়।
+
+নীচের কোড স্নিপেট উপরের চিত্রটি আরও ভালভাবে ব্যাখ্যা করবে। এটিকে কার্যকলাপ_মাইন.এক্সএম এ আটকান
+
+The below code snippet will explain the above image in better way. Paste it in activity_main.xm
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,8 +135,6 @@ The below code snippet will explain the above image in better way. Paste it in a
 
 
 
-
-
 # Different XML Files Used in Android:
 
 > ## **_Different XML Files Used in Android:_**
@@ -124,9 +150,17 @@ You will find out this file inside the res folder and inside it there is another
 
 ![Basics Android UI](./Layout-XML-in-Android-Studio.jpg "Layout XML Files")
 
+## 1. লেআউট এক্সএমএল ফাইলগুলি:
+
+  লেআউট এক্সএমএল ফাইলগুলি আমাদের অ্যাপ্লিকেশনটির প্রকৃত ইউআই (ইউজার ইন্টারফেস) সংজ্ঞায়িত করতে ব্যবহৃত হয়। এটি আমাদের অ্যাপ্লিকেশনটিতে সমস্ত উপাদান (দর্শন) বা সরঞ্জামগুলি ব্যবহার করতে চাই যা এটি ধারণ করে। টেক্সটভিউ, বোতাম এবং অন্যান্য ইউআই উপাদানগুলির মতো।
+
+  ### অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:
+আপনি এই ফাইলটি রেজোল্ড ফোল্ডারের ভিতরে খুঁজে পাবেন এবং এর ভিতরে অন্য একটি ফোল্ডার রয়েছে যার নাম লেআউট রয়েছে যেখানে আপনি তাদের নিজ নিজ ক্রিয়াকলাপ বা টুকরো জন্য সমস্ত লেআউট ফাইল পাবেন।
+
 ### Basic Layout XML Code:
 Below we show activity_main.xml file in which we have two TextView’s.
-
+### বেসিক লেআউট এক্সএমএল কোড:
+নীচে আমরা ক্রিয়াকলাপ_মাইন.এক্সএমএল ফাইলটি প্রদর্শন করি যেখানে আমাদের দুটি পাঠ্যদর্শন রয়েছে।
 ``` xml
 
 <!--  RelativeLayout in which we set green color for the background -->
@@ -170,6 +204,13 @@ android:textStyle="bold" />
 
  This xml is used to define all the components of our application. It includes the names of our application packages, our Activities, receivers, services  and the permissions that our application needs. For Example – Suppose we need to use internet in our app then we need to define Internet permission in this file.
 
+## 2. ম্যানিফেস্ট এক্সএমএল ফাইল (মেইনফেস্ট.এক্সএমএল):
+
+  এই এক্সএমএলটি আমাদের অ্যাপ্লিকেশনটির সমস্ত উপাদান সংজ্ঞায়িত করতে ব্যবহৃত হয়। এটিতে আমাদের অ্যাপ্লিকেশনগুলির প্রয়োজনীয় প্যাকেজগুলির নাম, আমাদের ক্রিয়াকলাপ, রিসিভার, পরিষেবা এবং আমাদের অ্যাপ্লিকেশনটির প্রয়োজনীয় অনুমতি রয়েছে। উদাহরণস্বরূপ - ধরুন আমাদের অ্যাপ্লিকেশনটিতে আমাদের ইন্টারনেট ব্যবহার করা প্রয়োজন তবে আমাদের এই ফাইলে ইন্টারনেটের অনুমতি নির্ধারণ করতে হবে।
+
+#### অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:
+
+এটি অ্যাপের ভিতরে অবস্থিত> ফোল্ডারটি প্রকাশ করে
 ####  Location in Android Studio:
 
 It is located inside app > manifests folder 
@@ -180,6 +221,9 @@ It is located inside app > manifests folder
 ### Defining Internet Permission in AndroidManifest.xml
 
 Below we show the AndroidManifest.xml file and define the Internet Permission in that file.
+### অ্যান্ড্রয়েড ম্যানিফেস্ট.এক্সএমএলে ইন্টারনেট অনুমতি নির্ধারণ করা
+
+নীচে আমরা অ্যান্ড্রয়েড ম্যানিফেস্ট.এক্সএমএল ফাইলটি দেখাই এবং সেই ফাইলটিতে ইন্টারনেট অনুমতি সংজ্ঞায়িত করি।
 
 ```XML
 
@@ -216,10 +260,21 @@ android:label="@string/app_name">
 
 ### Location in Android Studio:
 
+321 / 5000
+Translation results
+## 3. স্ট্রিংস এক্সএমএল ফাইল (স্ট্রিং.এক্সএমএল):
+  এই এক্সএমএল ফাইলটি হার্ড-কোডেড স্ট্রিংগুলিকে একক স্ট্রিংয়ের সাথে প্রতিস্থাপন করতে ব্যবহৃত হয়। আমরা এই এক্সএমএল ফাইলে সমস্ত স্ট্রিং সংজ্ঞায়িত করেছি এবং তারপরে এই ফাইলটি থেকে আমাদের অ্যাপে (ক্রিয়াকলাপ বা লেআউট এক্সএমএল ফাইলগুলিতে) অ্যাক্সেস করব। এই ফাইলটি কোডের পুনঃব্যবহারযোগ্যতা বাড়ায়।
+
+### অ্যান্ড্রয়েড স্টুডিওতে অবস্থান: 
+
 ![strings-xml-location-android-studio](./strings-xml-location-android-studio.jpg "strings-xml-location-android-studio")
 
 
 > Below we show strings.xml file and define a string in the file.
+
+65 / 5000
+Translation results
+> নীচে আমরা স্ট্রিং.এক্সএমএল ফাইল দেখি এবং ফাইলটিতে একটি স্ট্রিং সংজ্ঞায়িত করি। 
 
 ```xml
 <resources>
@@ -238,11 +293,15 @@ This xml is used to define different styles and looks for the UI(User Interface)
 
 ### Location in Android Studio:
 
+## 4. স্টাইলস এক্সএমএল ফাইল (শৈলী। এক্সএমএল):
+এই এক্সএমএলটি বিভিন্ন স্টাইল সংজ্ঞায়িত করতে ব্যবহৃত হয় এবং অ্যাপ্লিকেশনটির ইউআই (ইউজার ইন্টারফেস) সন্ধান করে। আমরা এই ফাইলটিতে আমাদের কাস্টম থিম এবং শৈলীর সংজ্ঞা দিই।
+
+### অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:
 
 ![styles-location-xml-Android-Studio-1](./styles-location-xml-Android-Studio-1.jpg "styles-location-xml-Android-Studio-1")
 
 > Below we show the style.xml file.
-
+> নীচে আমরা স্টাইল.এক্সএমএল ফাইলটি দেখাব।
 ```xml
 <resources>
 <!-- Base application theme. -->
@@ -260,6 +319,14 @@ These are those xml files that are used to provide various graphics to the eleme
 
 > Below we show custom_drawable.xml file and create a gradient background color using style attribute.
 
+
+## 5. অঙ্কনযোগ্য এক্সএমএল ফাইল:
+এটি সেইগুলি এক্সএমএল ফাইল যা অ্যাপ্লিকেশনের উপাদানগুলি বা দর্শনের বিভিন্ন গ্রাফিক্স সরবরাহ করতে ব্যবহৃত হয়। যখন আমাদের একটি কাস্টম ইউআই তৈরি করা দরকার তখন আমরা অঙ্কনযোগ্য এক্সএমএল ফাইল ব্যবহার করি। মনে করুন আমাদের যদি দেখার জন্য বাটনের পটভূমিতে কোনও গ্রেডিয়েন্ট রঙ বা কোনও কাস্টম শেপ সংজ্ঞায়িত করতে হয় তবে আমরা একটি অঙ্কনযোগ্য এক্সএমএল ফাইল তৈরি করব এবং এটি ভিউ এর পটভূমিতে সেট করব।
+
+>>> পড়ুন: অ্যান্ড্রয়েড স্টুডিওতে কীভাবে ড্রয়যোগ্য রিসোর্স এক্সএমএল ফাইল তৈরি করবেন
+
+> নীচে আমরা কাস্টম_ড্রেবেবল.এক্সএমএল ফাইল দেখি এবং শৈলীর বৈশিষ্ট্য ব্যবহার করে গ্রেডিয়েন্ট পটভূমি রঙ তৈরি করি।
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
@@ -276,6 +343,10 @@ android:startColor="#f00" />
 
 ### Location in Android Studio
 
+## 6. রঙিন এক্সএমএল ফাইল (color.xML):
+  এই ফাইলটি আমরা আমাদের অ্যাপ্লিকেশনটিতে যে রঙিন কোডগুলি ব্যবহার করেছি তা সংজ্ঞায়িত করতে ব্যবহৃত হয়। আমরা কেবল এই ফাইলটিতে রঙের সংজ্ঞা দিই এবং এই ফাইলটি থেকে আমাদের অ্যাপ্লিকেশনটিতে সেগুলি ব্যবহার করি।
+
+### অ্যান্ড্রয়েড স্টুডিওতে অবস্থান
 
 ![colors-xml-location-Android-Studio](./colors-xml-location-Android-Studio.jpg "colors-xml-location-Android-Studio")
 
@@ -294,10 +365,16 @@ android:startColor="#f00" />
 
 ### Location in Android Studio:
 
+## 7. মাত্রা এক্সএমএল ফাইল (dimens.xML):
+  এই এক্সএমএল ফাইলটি ভিউ'র মাত্রা নির্ধারণ করতে ব্যবহৃত হয়। মনে করুন আমাদের 50 ডিপি (ঘনত্বের পিক্সেল) উচ্চতার একটি বাটন প্রয়োজন তখন আমরা dimens.xML ফাইলে 50dp মানটি সংজ্ঞায়িত করি এবং তারপরে এই ফাইলটি থেকে আমাদের অ্যাপ্লিকেশনটিতে এটি ব্যবহার করি।
+
+### অ্যান্ড্রয়েড স্টুডিওতে অবস্থান:
 
 ![Dimension-xml-File-in-Android-Studio](./Dimension-xml-File-in-Android-Studio.jpg "Dimension-xml-File-in-Android-Studio")
 
 > Below we show the dimens.xml file in which we define 50dp  dimension for Button height.
+
+> নীচে আমরা dimens.xML ফাইলটি দেখাই যেখানে আমরা বোতামের উচ্চতার জন্য 50dp মাত্রা নির্ধারণ করি।
 
 ```xml
 <resources>
@@ -306,6 +383,7 @@ android:startColor="#f00" />
 <dimen name="activity_vertical_margin">16dp</dimen><dimen name="btnheight">50dp</dimen>
 </resources>
 ```
+
 
 # HOME [digitalbd.org](https://digitalbd.org) 
 
